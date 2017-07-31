@@ -33,17 +33,7 @@ module.exports = function (wallaby) {
         path.join(wallaby.projectCacheDir, 'src/app'),
         path.join(wallaby.projectCacheDir, 'src')
       ]
-    },
-
-    plugins: [new LoaderOptionsPlugin({
-      options: {
-        sassLoader: {
-          includePaths: [
-            "./src/styles"
-          ]
-        }
-      }
-    })]
+    }
   });
 
   return {
