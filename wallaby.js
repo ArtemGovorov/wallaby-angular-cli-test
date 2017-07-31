@@ -22,7 +22,7 @@ module.exports = function (wallaby) {
         {test: /\.json$/, loader: 'json-loader'},
         {test: /\.styl$/, loaders: ['raw-loader', 'stylus-loader']},
         {test: /\.less$/, loaders: ['raw-loader', 'less-loader']},
-        {test: /\.scss$|\.sass$/, loaders: ['raw-loader', 'sass-loader']},
+        {test: /\.scss$|\.sass$/, loaders: ['raw-loader', {loader: 'sass-loader', options: {includePaths: ['./src/styles']}}]},
         {test: /\.(jpg|png)$/, loader: 'url-loader?limit=128000'}
       ]
     },
